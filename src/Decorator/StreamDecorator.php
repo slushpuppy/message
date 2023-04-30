@@ -19,7 +19,7 @@ trait StreamDecorator
     /**
      * {@inheritdoc}
      */
-    public function __toString()
+    public function __toString() : string
     {
         return $this->stream->__toString();
     }
@@ -27,7 +27,7 @@ trait StreamDecorator
     /**
      * {@inheritdoc}
      */
-    public function close()
+    public function close() : void
     {
         $this->stream->close();
     }
@@ -43,7 +43,7 @@ trait StreamDecorator
     /**
      * {@inheritdoc}
      */
-    public function getSize()
+    public function getSize() : ?int
     {
         return $this->stream->getSize();
     }
@@ -51,7 +51,7 @@ trait StreamDecorator
     /**
      * {@inheritdoc}
      */
-    public function tell()
+    public function tell() : int
     {
         return $this->stream->tell();
     }
@@ -59,7 +59,7 @@ trait StreamDecorator
     /**
      * {@inheritdoc}
      */
-    public function eof()
+    public function eof() : bool
     {
         return $this->stream->eof();
     }
@@ -67,7 +67,7 @@ trait StreamDecorator
     /**
      * {@inheritdoc}
      */
-    public function isSeekable()
+    public function isSeekable() : bool
     {
         return $this->stream->isSeekable();
     }
@@ -75,7 +75,7 @@ trait StreamDecorator
     /**
      * {@inheritdoc}
      */
-    public function seek($offset, $whence = SEEK_SET)
+    public function seek($offset, $whence = SEEK_SET) : void
     {
         $this->stream->seek($offset, $whence);
     }
@@ -83,7 +83,7 @@ trait StreamDecorator
     /**
      * {@inheritdoc}
      */
-    public function rewind()
+    public function rewind() : void
     {
         $this->stream->rewind();
     }
@@ -91,7 +91,7 @@ trait StreamDecorator
     /**
      * {@inheritdoc}
      */
-    public function isWritable()
+    public function isWritable() : bool
     {
         return $this->stream->isWritable();
     }
@@ -99,7 +99,7 @@ trait StreamDecorator
     /**
      * {@inheritdoc}
      */
-    public function write($string)
+    public function write($string) : int
     {
         return $this->stream->write($string);
     }
@@ -107,7 +107,7 @@ trait StreamDecorator
     /**
      * {@inheritdoc}
      */
-    public function isReadable()
+    public function isReadable() : bool
     {
         return $this->stream->isReadable();
     }
@@ -115,7 +115,7 @@ trait StreamDecorator
     /**
      * {@inheritdoc}
      */
-    public function read($length)
+    public function read($length) : string
     {
         return $this->stream->read($length);
     }
@@ -123,7 +123,7 @@ trait StreamDecorator
     /**
      * {@inheritdoc}
      */
-    public function getContents()
+    public function getContents() : string
     {
         return $this->stream->getContents();
     }
